@@ -1,11 +1,105 @@
+Code snippet
+
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MenuItemCard from '../components/MenuItemCard.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Your Restaurant Name - Home">
+  <section class="relative h-screen flex items-center justify-center text-white">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/hero-bg.jpg"
+        alt="Elegant restaurant interior with a warm ambiance"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-playfair font-bold mb-4 animate-fade-in-up">
+        The Golden Spoon
+      </h1>
+      <p class="text-lg md:text-xl font-roboto mb-8 animate-fade-in-up delay-200">
+        Experience exquisite dining in an elegant setting.
+      </p>
+      <a
+        href="/menu"
+        class="bg-golden-spoon-accent text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-golden-spoon-accent-dark transition-colors duration-300 animate-fade-in-up delay-400"
+      >
+        View Menu
+      </a>
+    </div>
+  </section>
+
+  <section class="container mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <h2 class="text-4xl font-playfair font-bold text-gray-100 mb-6">Our Story</h2>
+        <p class="text-lg text-gray-400 mb-4">
+          Established in 2020, The Golden Spoon was founded on a passion for culinary excellence and a commitment to creating unforgettable dining experiences. We source the finest local ingredients to craft dishes that are both innovative and comforting, served in a setting that exudes sophistication and warmth.
+        </p>
+        <p class="text-lg text-gray-400">
+          Our chefs blend traditional techniques with modern creativity to bring you a menu that celebrates flavor and artistry. We invite you to join us and become a part of our story.
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <img
+          src="/images/restaurant-interior.jpg"
+          alt="Elegant and cozy interior of The Golden Spoon restaurant"
+          class="rounded-lg shadow-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-900 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-playfair font-bold text-gray-100 mb-12">Featured Dishes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <MenuItemCard
+          image="/images/dish-1.jpg"
+          title="Seared Scallops"
+          description="Pan-seared scallops with a lemon-butter sauce and a hint of garlic."
+          price="$28"
+        />
+        <MenuItemCard
+          image="/images/dish-2.jpg"
+          title="Filet Mignon"
+          description="Tender filet mignon cooked to perfection, served with asparagus and roasted potatoes."
+          price="$45"
+        />
+        <MenuItemCard
+          image="/images/dish-3.jpg"
+          title="Chocolate Lava Cake"
+          description="A decadent molten chocolate cake served warm with a scoop of vanilla bean ice cream."
+          price="$12"
+        />
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+</style>
