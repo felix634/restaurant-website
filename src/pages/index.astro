@@ -1,5 +1,3 @@
-Code snippet
-
 ---
 import Layout from '../layouts/Layout.astro';
 import MenuItemCard from '../components/MenuItemCard.astro';
@@ -57,22 +55,19 @@ import MenuItemCard from '../components/MenuItemCard.astro';
       <h2 class="text-4xl font-playfair font-bold text-gray-100 mb-12">Featured Dishes</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <MenuItemCard
-          image="/images/dish-1.jpg"
-          title="Seared Scallops"
+          name="Seared Scallops"
           description="Pan-seared scallops with a lemon-butter sauce and a hint of garlic."
-          price="$28"
+          price={28}
         />
         <MenuItemCard
-          image="/images/dish-2.jpg"
-          title="Filet Mignon"
+          name="Filet Mignon"
           description="Tender filet mignon cooked to perfection, served with asparagus and roasted potatoes."
-          price="$45"
+          price={45}
         />
         <MenuItemCard
-          image="/images/dish-3.jpg"
-          title="Chocolate Lava Cake"
+          name="Chocolate Lava Cake"
           description="A decadent molten chocolate cake served warm with a scoop of vanilla bean ice cream."
-          price="$12"
+          price={12}
         />
       </div>
     </div>
