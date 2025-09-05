@@ -11,6 +11,10 @@ export default {
         'playfair': ['"Playfair Display"', ...defaultTheme.fontFamily.serif],
         'roboto': ['"Roboto"', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'golden-spoon-accent': '#C0A068',
+        'golden-spoon-accent-dark': '#B09058',
+      },
     },
   },
   plugins: [],
