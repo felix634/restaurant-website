@@ -5,80 +5,80 @@ import MenuItem from '../components/MenuItem.astro';
 
 <Layout title="Your Restaurant Name - Menu">
   <div class="container mx-auto px-4 py-16">
-    <h1 class="text-5xl md:text-6xl font-playfair font-bold text-center text-gray-100 mb-12">
+    <h1 class="text-5xl md:text-6xl font-serif font-bold text-center text-gray-100 mb-12">
       Our Menu
     </h1>
 
     <section class="mb-16">
-      <h2 class="text-3xl font-playfair font-bold text-golden-spoon-accent mb-8 border-b-2 border-golden-spoon-accent pb-2">
+      <h2 class="text-3xl font-serif font-bold text-golden-spoon-accent mb-8 border-b-2 border-golden-spoon-accent pb-2">
         Appetizers
       </h2>
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <MenuItem
-          title="Truffle Arancini"
+          name="Truffle Arancini"
           description="Crispy risotto balls filled with mozzarella and black truffle, served with a roasted red pepper coulis."
-          price="$14"
+          price={14}
         />
         <MenuItem
-          title="Bruschetta al Pomodoro"
+          name="Bruschetta al Pomodoro"
           description="Toasted ciabatta bread topped with fresh tomatoes, basil, garlic, and a drizzle of balsamic glaze."
-          price="$11"
+          price={11}
         />
         <MenuItem
-          title="Seared Scallops"
+          name="Seared Scallops"
           description="Pan-seared scallops with a lemon-butter sauce and a hint of garlic, served over a bed of spinach."
-          price="$28"
+          price={28}
         />
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-3xl font-playfair font-bold text-golden-spoon-accent mb-8 border-b-2 border-golden-spoon-accent pb-2">
+      <h2 class="text-3xl font-serif font-bold text-golden-spoon-accent mb-8 border-b-2 border-golden-spoon-accent pb-2">
         Main Courses
       </h2>
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <MenuItem
-          title="Filet Mignon"
+          name="Filet Mignon"
           description="8oz tender filet mignon cooked to your preference, served with asparagus and creamy roasted potatoes."
-          price="$45"
+          price={45}
         />
         <MenuItem
-          title="Wild Mushroom Risotto"
+          name="Wild Mushroom Risotto"
           description="Creamy Arborio rice with a medley of wild mushrooms, Parmesan cheese, and fresh parsley."
-          price="$26"
+          price={26}
         />
         <MenuItem
-          title="Pan-Seared Salmon"
+          name="Pan-Seared Salmon"
           description="Sustainable Atlantic salmon, pan-seared and served with a quinoa salad and a light dill sauce."
-          price="$32"
+          price={32}
         />
         <MenuItem
-          title="Chicken Saltimbocca"
+          name="Chicken Saltimbocca"
           description="Thin chicken cutlets topped with prosciutto and sage, pan-fried and served in a white wine sauce."
-          price="$29"
+          price={29}
         />
       </div>
     </section>
 
     <section>
-      <h2 class="text-3xl font-playfair font-bold text-golden-spoon-accent mb-8 border-b-2 border-golden-spoon-accent pb-2">
+      <h2 class="text-3xl font-serif font-bold text-golden-spoon-accent mb-8 border-b-2 border-golden-spoon-accent pb-2">
         Desserts
       </h2>
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <MenuItem
-          title="Chocolate Lava Cake"
+          name="Chocolate Lava Cake"
           description="A rich, molten chocolate cake with a gooey center, served warm with a scoop of vanilla bean ice cream."
-          price="$12"
+          price={12}
         />
         <MenuItem
-          title="Crème Brûlée"
+          name="Crème Brûlée"
           description="A classic French custard with a crisp caramelized sugar topping and fresh berries."
-          price="$10"
+          price={10}
         />
         <MenuItem
-          title="Lemon Tart"
+          name="Lemon Tart"
           description="A tangy and sweet lemon curd tart in a flaky pastry crust, finished with powdered sugar."
-          price="$9"
+          price={9}
         />
       </div>
     </section>
